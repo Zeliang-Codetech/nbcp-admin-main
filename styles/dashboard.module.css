@@ -1,0 +1,74 @@
+.container {
+  min-height: 100vh;
+}
+.container h3 {
+  font-size: 25px;
+}
+.container h4 {
+  font-size: 20px;
+}
+.container h5 {
+  font-size: 15px;
+}
+.header {
+  background-color: #00b33c;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.link {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  padding: 10px;
+  display: flex;
+  font-size: 16px;
+  margin: 10px 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+.share_btn {
+  width: 150px;
+  background-color: white;
+  color: #00b33c;
+  text-align: center;
+  margin-right: 20px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.share_btn:hover {
+  opacity: 0.9;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 30px;
+  font-size: 40px;
+  color: grey;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.card .icon {
+  background-color: #fff0eb;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00b33c;
+  margin-bottom: 10px;
+}
+.card h5 {
+  font-size: 16px;
+}
