@@ -23,4 +23,10 @@ const ComplaintStatus = Object.freeze({
   REJECTED: 2,
 });
 
-export { Routes, QUERY_TAGS, ComplaintStatus };
+const UserRole = Object.freeze({
+  ADMIN: 1,
+  USER: 2,
+  AGENT: 3,
+});
+
+export { Routes, QUERY_TAGS, ComplaintStatus, UserRole };

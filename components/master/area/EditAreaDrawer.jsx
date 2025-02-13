@@ -40,6 +40,8 @@ const EditAreaDrawer = ({ open, setOpen, data }) => {
     }
   };
 
+  const { Option } = Select;
+
   return (
     <Drawer
       title="Edit Area"

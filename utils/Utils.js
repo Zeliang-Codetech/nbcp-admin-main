@@ -45,4 +45,18 @@ export const getComplaintStatus = (type) => {
   }
   return name;
 };
+
+export const getUserRole = (role) => {
+  switch (role) {
+    case 1:
+      return "Admin";
+    case 2:
+      return "User";
+    case 3:
+      return "Agent";
+    default:
+      return "Unknown";
+  }
+};
+
 export {};

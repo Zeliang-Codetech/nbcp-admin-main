@@ -51,7 +51,7 @@ const MainLayout = ({ Component, pageProps }) => {
     if (isGetUserError) {
       dispatch(setLoggedIn(false));
     }
-  }, [response, isGetUserLoading, isGetUserSuccess, isGetUserError]);
+  }, [response, isGetUserLoading, isGetUserSuccess, isGetUserError, dispatch]);
   const handleLogout = async () => {
     try {
       const result = await logout().unwrap();
