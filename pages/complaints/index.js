@@ -50,38 +50,29 @@ const BookingsPage = () => {
       dataIndex: "created_at",
       key: "booking_date",
       width: "10%",
+      align: "center"
     },
     {
       title: "USER",
-      dataIndex: "",
+      dataIndex: "client_details",
       key: "client_name",
       width: "10%",
-      render: () => {},
+      align: "center",
+      render: (client_details) => client_details?.phone || 'N/A',
     },
     {
       title: "CATEGORY",
       dataIndex: "category_name",
       key: "category_name",
       width: "15%",
+      align: "center"
     },
     {
       title: "CITY",
       dataIndex: "city_name",
       key: "city_name",
       width: "10%",
-    },
-    {
-      title: "AREA",
-      dataIndex: "area_name",
-      key: "area_name",
-      width: "10%",
-    },
-    {
-      title: "AQI",
-      dataIndex: "aqi",
-      key: "aqi",
-      width: "10%",
-      align: "center",
+      align: "center"
     },
     {
       title: "STATUS",
@@ -90,6 +81,19 @@ const BookingsPage = () => {
       width: "10%",
       align: "center",
       render: (value) => getComplaintStatus(value),
+    },
+    {
+      title: "ACTIONS",
+      key: "actions",
+      width: "10%",
+      align: "center",
+      render: (record) => (
+        <Link href={`/complaints/view/${record._id}`}>
+          <a>
+            <EyeOutlined /> View
+          </a>
+        </Link>
+      ),
     },
   ];
   const handleDelete = async (id) => {
