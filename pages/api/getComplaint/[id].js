@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { complaintApi } from '../../store/slices/api/complaintApi';
+import { complaintApi } from '../../../store/slices/api/complaintApi';
 
 const getComplaintById = async (req, res) => {
   const { id } = req.query;
