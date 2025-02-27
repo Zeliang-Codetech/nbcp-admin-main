@@ -56,9 +56,9 @@ const BookingsPage = () => {
       title: "USER",
       dataIndex: "client_details",
       key: "client_name",
-      width: "10%",
+      width: "20%",
       align: "center",
-      render: (client_details) => client_details?.phone || 'N/A',
+      render: (client_details) => client_details?.email || 'N/A',
     },
     {
       title: "CATEGORY",
