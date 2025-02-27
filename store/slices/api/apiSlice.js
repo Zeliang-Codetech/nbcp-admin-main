@@ -1,12 +1,23 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 import axios from "axios";
 axios.defaults.withCredentials = true;
+
+axios.defaults.headers.common['Content-Type'] = 'application/json';
 import { QUERY_TAGS } from "./../../../utils/Status";
 const axiosBaseQuery =
   ({ baseUrl } = { baseUrl: "" }) =>
   async ({ url, method, body: data, params }) => {
     try {
-      const result = await axios({ url: baseUrl + url, method, data, params });
+      const result = await axios({ 
+        url: baseUrl + url, 
+        method, 
+        data, 
+        params,
+        withCredentials: true,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       return { data: result.data };
     } catch (err) {
       return {
