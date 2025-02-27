@@ -39,7 +39,7 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <div className={`${styles.section}`}>
-        {/* <div
+        <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -47,9 +47,9 @@ const LoginPage = () => {
           }}
         >
           <div className={styles.logo}>
-            <Image src="/logo.webp" alt="" layout="fill" objectFit="cover" />
+            <Image src="/npcb-logo.png" alt="Logo" layout="fill" objectFit="contain" priority />
           </div>
-        </div> */}
+        </div>
 
         <div>
           <h3>Login / Register</h3>
@@ -83,7 +83,7 @@ const LoginPage = () => {
                 },
               ]}
             >
-              <Input className={styles.input} />
+              <Input.Password className={styles.input} />
             </Form.Item>
             <Button
               htmlType="submit"
