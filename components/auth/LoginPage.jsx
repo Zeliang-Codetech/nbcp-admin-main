@@ -92,10 +92,10 @@ const LoginPage = () => {
             >
               LOGIN
             </Button>
-            <p>
+            {/* <p>
               By clicking on Verify, I accept the Terms & Conditions & Privacy
               Policy
-            </p>
+            </p> */}
           </Form>
         </div>
       </div>

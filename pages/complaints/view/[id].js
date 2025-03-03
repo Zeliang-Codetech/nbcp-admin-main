@@ -47,7 +47,8 @@ const ComplaintViewPage = () => {
           <Descriptions.Item label="Status">{getComplaintStatus(complaint.status)}</Descriptions.Item>
           <Descriptions.Item label="Created At">{complaint.created_at}</Descriptions.Item>
           <Descriptions.Item label="Client Email">{complaint.client_details?.email}</Descriptions.Item>
-          <Descriptions.Item label="Client Name">{complaint.client_details?.name || 'N/A'}</Descriptions.Item>
+          <Descriptions.Item label="Latitude">{complaint.latitude || 'N/A'}</Descriptions.Item>
+          <Descriptions.Item label="Longitude">{complaint.longitude || 'N/A'}</Descriptions.Item>
           <Descriptions.Item label="Description" span={2}>
             {complaint.description}
           </Descriptions.Item>
