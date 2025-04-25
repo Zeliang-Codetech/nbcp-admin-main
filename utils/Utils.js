@@ -31,19 +31,24 @@ export const showError = (text) => {
 
 export const getComplaintStatus = (type) => {
   let name = "";
+  let color = "";
   switch (type) {
     case ComplaintStatus.PENDING:
       name = "Pending";
+      color = "#faad14"; // Yellow/amber color for pending
       break;
-    case ComplaintStatus.APPROVED:
-      name = "Approved";
+    case ComplaintStatus.RESOLVED:
+      name = "Resolved";
+      color = "#52c41a"; // Green color for resolved
       break;
     case ComplaintStatus.REJECTED:
       name = "Rejected";
+      color = "#ff4d4f"; // Red color for rejected
       break;
     default:
+      color = "#d9d9d9"; // Default gray
   }
-  return name;
+  return { name, color };
 };
 
 export const getUserRole = (role) => {

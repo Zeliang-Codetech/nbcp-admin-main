@@ -20,6 +20,15 @@ export const complaintApi = apiSlice.injectEndpoints({
       }),
       invalidatesTags: [QUERY_TAGS.COMPLAINT],
     }),
+    // Add new mutation for updating complaint status
+    updateComplaintStatus: builder.mutation({
+      query: ({ id, status }) => ({
+        url: `${BASE_URL}/${id}/status`,
+        method: "PUT",
+        body: { status },
+      }),
+      invalidatesTags: [QUERY_TAGS.COMPLAINT],
+    }),
     getComplaints: builder.query({
       query: () => ({
         url: `${BASE_URL}`,
@@ -52,4 +61,5 @@ export const {
   useDeleteComplaintMutation,
   useGetComplaintQuery,
   useGetComplaintsQuery,
+  useUpdateComplaintStatusMutation, // Export the new mutation hook
 } = complaintApi;

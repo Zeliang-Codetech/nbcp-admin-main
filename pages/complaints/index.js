@@ -58,7 +58,7 @@ const BookingsPage = () => {
       key: "client_name",
       width: "20%",
       align: "center",
-      render: (client_details) => client_details?.email || 'N/A',
+      render: (client_details) => client_details?.email || client_details?.phone || "N/A",
     },
     {
       title: "CATEGORY",
@@ -74,13 +74,29 @@ const BookingsPage = () => {
       width: "10%",
       align: "center"
     },
+    // In the columns definition, update the status render function
     {
       title: "STATUS",
       dataIndex: "status",
       key: "status",
       width: "10%",
       align: "center",
-      render: (value) => getComplaintStatus(value),
+      render: (value) => {
+        const status = getComplaintStatus(value);
+        return (
+          <span
+            style={{
+              backgroundColor: status.color,
+              color: '#fff',
+              padding: '4px 8px',
+              borderRadius: '4px',
+              fontWeight: 'bold'
+            }}
+          >
+            {status.name}
+          </span>
+        );
+      },
     },
     {
       title: "ACTIONS",

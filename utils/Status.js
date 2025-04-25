@@ -18,8 +18,8 @@ const QUERY_TAGS = Object.freeze({
 });
 
 const ComplaintStatus = Object.freeze({
-  PENDING: 0,
-  APPROVED: 1,
+  RESOLVED: 0,
+  PENDING: 1,
   REJECTED: 2,
 });
 
