@@ -6,6 +6,8 @@ const Routes = Object.freeze({
   CATEGORIES: "categories",
   CITIES: "cities",
   COMPLAINTS: "complaints",
+  ABOUT_US: "about_us",
+  BULLETIN: "bulletin", // Add this new route
 });
 
 const QUERY_TAGS = Object.freeze({
@@ -15,6 +17,8 @@ const QUERY_TAGS = Object.freeze({
   CITY: "city",
   CATEGORY: "category",
   COMPLAINT: "complaint",
+  ABOUT_US: "about_us",
+  BULLETIN: "bulletin", // Add this new query tag
 });
 
 const ComplaintStatus = Object.freeze({

@@ -4,6 +4,8 @@ import {
   MdContactSupport,
   MdOutlineDashboardCustomize,
   MdOutlineHeadphones,
+  MdInfo,
+  MdAnnouncement, // Import the announcement icon
 } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { SettingOutlined, UserOutlined } from "@ant-design/icons";
@@ -55,21 +57,47 @@ const SideMenu = (props) => {
       case Routes.CITIES:
         router.push("/master/cities");
         break;
+      case Routes.ABOUT_US:
+        router.push("/about-us");
+        break;
+      case Routes.BULLETIN:
+        router.push("/bulletin");
+        break;
       default:
     }
   };
 
-  const [selectedKey, setSelectedKey] = useState("1");
+  const [selectedKey, setSelectedKey] = useState(Routes.DASHBOARD);
+
+  // Update selected key based on current route
+  useEffect(() => {
+    const { pathname } = router;
+    
+    if (pathname === "/") {
+      setSelectedKey(Routes.DASHBOARD);
+    } else if (pathname.includes("/complaints")) {
+      setSelectedKey(Routes.COMPLAINTS);
+    } else if (pathname.includes("/clients")) {
+      setSelectedKey(Routes.CLIENTS);
+    } else if (pathname.includes("/users")) {
+      setSelectedKey(Routes.USERS);
+    } else if (pathname.includes("/master/categories")) {
+      setSelectedKey(Routes.CATEGORIES);
+    } else if (pathname.includes("/master/cities")) {
+      setSelectedKey(Routes.CITIES);
+    } else if (pathname.includes("/about-us")) {
+      setSelectedKey(Routes.ABOUT_US);
+    } else if (pathname.includes("/bulletin")) {
+      setSelectedKey(Routes.BULLETIN);
+    }
+  }, [router.pathname]);
 
   return (
     <>
-      {/* <div className="position-relative mt-2" style={{ height: 50 }}>
-        <Image src="/logo.png" alt="" layout="fill" objectFit="cover" />
-      </div> */}
       <Menu
         mode="inline"
         onClick={handleMenuClick}
-        defaultSelectedKeys={["1"]}
+        selectedKeys={[selectedKey]}
         style={{ backgroundColor: "white" }}
       >
         <>
@@ -89,6 +117,14 @@ const SideMenu = (props) => {
             <Item key={Routes.CATEGORIES}>Categories</Item>
             <Item key={Routes.CITIES}>Cities & Areas</Item>
           </SubMenu>
+
+          <Item key={Routes.BULLETIN} icon={<MdAnnouncement />}>
+            Bulletin
+          </Item>
+
+          <Item key={Routes.ABOUT_US} icon={<MdInfo />}>
+            About Us
+          </Item>
 
           <Item key={Routes.SUPPORT} icon={<MdOutlineHeadphones />}>
             Help & Support

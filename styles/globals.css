@@ -1610,3 +1610,43 @@ h5 {
   min-height: 350px;
   overflow: auto;
 }
+
+.about-us-content {
+  font-family: 'Urbanist', sans-serif;
+  line-height: 1.6;
+}
+
+.about-us-content h1,
+.about-us-content h2,
+.about-us-content h3,
+.about-us-content h4,
+.about-us-content h5,
+.about-us-content h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #333;
+}
+
+.about-us-content p {
+  margin-bottom: 1em;
+}
+
+.about-us-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.about-us-content table td,
+.about-us-content table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.about-us-content table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f2f2f2;
+}
