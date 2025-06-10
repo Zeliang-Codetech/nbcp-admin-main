@@ -97,7 +97,7 @@ const DashboardPage = () => {
       <h2 className="mb-4">Quick Links</h2>
       <div className="row mt-3">
         <div className="col mr-3">
-          <Card name="Analytics" icon={<AiOutlineLineChart />} link="/orders" />
+          <Card name="About Us" icon={<AiOutlineLineChart />} link="/about-us" />
         </div>
         <div className="col mr-3 ml-3">
           <Card name="Complaints" icon={<GrDocument />} link="/complaints" />

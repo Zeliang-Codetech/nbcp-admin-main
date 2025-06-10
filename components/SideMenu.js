@@ -63,6 +63,9 @@ const SideMenu = (props) => {
       case Routes.BULLETIN:
         router.push("/bulletin");
         break;
+      case Routes.SUPPORT:
+        router.push("/help-support");
+        break;
       default:
     }
   };
@@ -89,6 +92,8 @@ const SideMenu = (props) => {
       setSelectedKey(Routes.ABOUT_US);
     } else if (pathname.includes("/bulletin")) {
       setSelectedKey(Routes.BULLETIN);
+    } else if (pathname.includes("/help-support")) {
+      setSelectedKey(Routes.SUPPORT);
     }
   }, [router.pathname]);
 
